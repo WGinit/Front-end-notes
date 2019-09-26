@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: wginit
  * @Date: 2019-09-26 09:29:33
- * @LastEditTime: 2019-09-26 10:07:07
+ * @LastEditTime: 2019-09-26 10:19:04
  -->
 
 # Event Loop
@@ -131,7 +131,7 @@
 * 事件触发线程管理一个 任务队列，异步任务触发条件达成，将回调事件放到 任务队列中
 * 执行栈中所有同步任务执行完毕，此时JS引擎线程空闲，系统会读取 任务队列，将可运行的异步任务回调事件添加到 执行栈中，开始执行
 
-![images](./images/event-loop1.png)
+![images](./images/event-loop/1.png)
 
 前端开发中我们会通过 setTimeout/setInterval来指定定时任务，会通过 XHR/fetch发送网络请求， 接下来简述一下 setTimeout/setInterval和 XHR/fetch到底做了什么事
 
@@ -145,7 +145,7 @@
 
 用一张图来解释：
 
-![images](./images/event-loop2.png)
+![images](./images/event-loop/2.png)
 
 用代码来解释一下：
 
@@ -229,4 +229,4 @@ setTimeout(()=>{
 * 渲染完毕后， JS线程继续接管，开始下一个 宏任务（从事件队列中获取）
 
 
-![images](./images/event-loop3.png)
+![images](./images/event-loop/3.png)
