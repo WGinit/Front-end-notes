@@ -1,7 +1,7 @@
 <!--
  * @Author: Wginit
  * @Date: 2019-09-26 09:23:15
- * @LastEditTime: 2019-09-27 13:42:21
+ * @LastEditTime: 2019-09-27 13:45:55
  -->
 ## 前端笔记记录
 
@@ -13,6 +13,6 @@
 
 * [css开发技巧](https://github.com/WGinit/Front-end-notes/blob/master/css-skill.md)
 
-* [代码注释]](https://github.com/WGinit/Front-end-notes/blob/master/code-annotation.md)
+* [代码注释](https://github.com/WGinit/Front-end-notes/blob/master/code-annotation.md)
 
 * [web性能优化](https://github.com/WGinit/Front-end-notes/blob/master/performance-optimization.md)
