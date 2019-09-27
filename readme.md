@@ -1,16 +1,18 @@
 <!--
  * @Author: Wginit
  * @Date: 2019-09-26 09:23:15
- * @LastEditTime: 2019-09-26 11:38:47
+ * @LastEditTime: 2019-09-27 13:42:21
  -->
 ## 前端笔记记录
 
-* [http-status](https://github.com/WGinit/Front-end-notes/blob/master/http-status.md)
+* [http状态码](https://github.com/WGinit/Front-end-notes/blob/master/http-status.md)
 
-* [event-loop](https://github.com/WGinit/Front-end-notes/blob/master/event-loop.md)
+* [事件循环(event-loop)](https://github.com/WGinit/Front-end-notes/blob/master/event-loop.md)
 
-* [js-util](https://github.com/WGinit/Front-end-notes/blob/master/js-util.md)
+* [js常用函数封装](https://github.com/WGinit/Front-end-notes/blob/master/js-util.md)
 
-* [css-skill](https://github.com/WGinit/Front-end-notes/blob/master/css-skill.md)
+* [css开发技巧](https://github.com/WGinit/Front-end-notes/blob/master/css-skill.md)
 
-* [code-annotation](https://github.com/WGinit/Front-end-notes/blob/master/code-annotation.md)
+* [代码注释]](https://github.com/WGinit/Front-end-notes/blob/master/code-annotation.md)
+
+* [web性能优化](https://github.com/WGinit/Front-end-notes/blob/master/performance-optimization.md)
