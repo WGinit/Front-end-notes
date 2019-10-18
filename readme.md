@@ -1,7 +1,7 @@
 <!--
  * @Author: Wginit
  * @Date: 2019-09-26 09:23:15
- * @LastEditTime: 2019-09-27 13:45:55
+ * @LastEditTime: 2019-10-18 17:24:40
  -->
 ## 前端笔记记录
 
@@ -16,3 +16,5 @@
 * [代码注释](https://github.com/WGinit/Front-end-notes/blob/master/code-annotation.md)
 
 * [web性能优化](https://github.com/WGinit/Front-end-notes/blob/master/performance-optimization.md)
+
+* [JavaScript设计模式](https://github.com/WGinit/Front-end-notes/blob/master/design-patterns.md)
