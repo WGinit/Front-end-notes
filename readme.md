@@ -1,7 +1,7 @@
 <!--
  * @Author: Wginit
  * @Date: 2019-09-26 09:23:15
- * @LastEditTime: 2019-10-18 17:24:40
+ * @LastEditTime: 2019-11-14 17:53:25
  -->
 ## 前端笔记记录
 
@@ -18,3 +18,5 @@
 * [web性能优化](https://github.com/WGinit/Front-end-notes/blob/master/performance-optimization.md)
 
 * [JavaScript设计模式](https://github.com/WGinit/Front-end-notes/blob/master/design-patterns.md)
+
+* [H5移动端常用知识点](https://github.com/WGinit/Front-end-notes/blob/master/h5-note.md)
