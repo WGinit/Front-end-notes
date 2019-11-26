@@ -1,5 +1,18 @@
 module.exports = [
   // {
+  //   text: 'JavaScript',
+  //   items: [
+  //     {
+  //       text: 'one',
+  //       link: '/javascript/one'
+  //     },
+  //     {
+  //       text: 'two',
+  //       link: '/javascript/two'
+  //     }
+  //   ]
+  // }
+  // {
   //   text: 'Github',
   //   link: 'https://github.com/wginit'
   // },
