@@ -4,7 +4,7 @@ const _sidebar = require('./sidebar')
 module.exports = {
   title: '白山羊笔记',
   description: '记录日常开发笔记',
-  base: './',
+  base: '/note/',
   port: '',
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
