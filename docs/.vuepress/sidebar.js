@@ -10,6 +10,9 @@ module.exports = [
   getSideBar('移动端', [
     ['/web/util', '移动端常用知识点总结']
   ]),
+  getSideBar('小程序', [
+    ['/miniapp/wx', '微信小程序']
+  ]),
   getSideBar('性能优化', [
     ['/performance/web', 'web端性能优化']
   ]),
@@ -25,7 +28,7 @@ function getSideBar(_title, _children) {
   return {
     title: _title,
     collapsable: true,
-    displayAllHeaders: true,
+    // displayAllHeaders: true,
     children: _children
   }
 }

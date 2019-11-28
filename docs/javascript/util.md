@@ -1,26 +1,32 @@
 
-### 优雅的取随机字符串
+## 优雅的取随机字符串
 
 ``` javascript
 Math.random().toString(16).substring(2) // 13位
 Math.random().toString(36).substring(2) // 11位
 ```
 
-### 在指定的范围内生成一个随机数
+## 随机数
+
+> 在指定的范围内生成一个随机数
 
 ``` javascript
 const randomInRange = (min, max) => Math.random() * (max - min) + min;
 // randomInRange(2,10) -> 6.0211363285087005
 ```
 
-### 在指定的范围内生成一个随机整数
+## 随机整数
+
+> 在指定的范围内生成一个随机整数
 
 ``` javascript
 const randomIntegerInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 // randomIntegerInRange(0, 5) -> 2
 ```
 
-### 创建过去七天的数组，如果将代码中的减号换成加号，你将得到未来7天的数组集合
+## 数组集合
+
+> 创建过去七天的数组，如果将代码中的减号换成加号，你将得到未来7天的数组集合
 
 ``` javascript
 
@@ -28,7 +34,7 @@ const randomIntegerInRange = (min, max) => Math.floor(Math.random() * (max - min
 [...Array(7).keys()].map(days => new Date(Date.now() - 86400000 * days));
 ```
 
-### 生成随机十六进制代码（生成随机颜色）
+## 生成随机十六进制代码（生成随机颜色）
 
 ``` javascript
 // 生成随机十六进制代码 如：'#c618b2'
@@ -36,28 +42,28 @@ const randomIntegerInRange = (min, max) => Math.floor(Math.random() * (max - min
 '#' + Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, '0');
 ```
 
-### 获取两个日期之间相差的天数
+## 获取两个日期之间相差的天数
 
 ``` javascript
 const getDaysDiffBetweenDates = (dateInitial, dateFinal) => (dateFinal - dateInitial) / (1000 * 3600 * 24);
 // getDaysDiffBetweenDates(new Date("2017-12-13"), new Date("2017-12-22")) -> 9
 ```
 
-### 根据键值对创建对象
+## 根据键值对创建对象
 
 ``` javascript
 const objectFromPairs = arr => arr.reduce((a, v) => (a[v[0]] = v[1], a), {});
 // objectFromPairs([['a',1],['b',2]]) -> {a: 1, b: 2}
 ```
 
-### 对象转化为键值
+## 对象转化为键值
 
 ``` javascript
 const objectToPairs = obj => Object.keys(obj).map(k => [k, obj[k]]);
 // objectToPairs({a: 1, b: 2}) -> [['a',1],['b',2]])
 ```
 
-### 大写每个单词的首字母
+## 大写每个单词的首字母
 
 ``` javascript
 const capitalizeEveryWord = str => str.replace(/\b[a-z]/g, char => char.toUpperCase());
@@ -65,7 +71,9 @@ const capitalizeEveryWord = str => str.replace(/\b[a-z]/g, char => char.toUpperC
 ```
 
 
-### 网址参数，通过适当的正则表达式，使用 match() 来获得所有的键值对， Array.reduce() 来映射和组合成一个单一的对象。将 location.search 作为参数传递给当前 url。
+## 网址参数
+
+> 网址参数通过适当的正则表达式，使用 match() 来获得所有的键值对， Array.reduce() 来映射和组合成一个单一的对象。将 location.search 作为参数传递给当前 url。
 
 ``` javascript
 const getUrlParameters = url =>
@@ -75,7 +83,7 @@ const getUrlParameters = url =>
 // getUrlParameters('http://url.com/page?name=Adam&surname=Smith') -> {name: 'Adam', surname: 'Smith'}
 ```
 
-### 扁平化数组
+## 扁平化数组
 
 ``` javascript
 const array = [1, [2, [3, 4], 5], 6, 7];
@@ -85,7 +93,7 @@ console.log(array.toString().split(',').map(ele => Number.parseInt(ele))); // =>
 
 ```
 
-### 获取数组中的最大值和最小值
+## 获取数组中的最大值和最小值
 
 ``` javascript
 let  numbers = [5, 458 , 120 , -215 , 228 , 400 , 122205, -85411];
@@ -93,7 +101,7 @@ let maxInNumbers = Math.max.apply(Math, numbers);
 let minInNumbers = Math.min.apply(Math, numbers);
 ```
 
-### 函数柯里化
+## 函数柯里化
 
 ``` javascript
 function curry(fn) {
@@ -118,7 +126,7 @@ function curry(fn) {
 
 ```
 
-### 数据类型判断
+## 数据类型判断
 
 ``` javascript
 const superTypeof = function (val) {
@@ -146,15 +154,17 @@ const superTypeof = function (val) {
  */
 ```
 
-### 确保数组值
-##### 使用 grid ，需要重新创建原始数据，并且每行的列长度可能不匹配， 为了确保不匹配行之间的长度相等，可以使用Array.fill方法。
+## 数组值
+
+> 确保数组值, 使用 grid ，需要重新创建原始数据，并且每行的列长度可能不匹配， 为了确保不匹配行之间的长度相等，可以使用Array.fill方法。
+
 ``` javascript
 let array = Array(5).fill('');
 console.log(array);
 // outputs (5) ["", "", "", "", ""]
 ```
 
-### 手写promise
+## 手写promise
 
 ``` javascript
 function myPromise(constructor){
@@ -201,7 +211,7 @@ myPromise.prototype.then=function(onFullfilled,onRejected){
 // 输出1
 ```
 
-### 函数防抖
+## 函数防抖
 
 ``` javascript
 // 防抖动函数
@@ -220,7 +230,7 @@ const debounce = (fn, wait=1500, immediate) => {
 
 ```
 
-###  函数节流
+##  函数节流
 
 ``` javascript
 const throttle = (fn, wait = 1500) => {
@@ -237,7 +247,7 @@ const throttle = (fn, wait = 1500) => {
 
 ```
 
-### 加强版函数节流
+## 加强版函数节流
 
 debounce 设置的 delay 时间结束就进行下一次操作，于是每次 debounce 都为该用户重新生成定时器，回调函数被延迟了不计其数次。频繁的延迟会导致用户迟迟得不到响应，用户同样会产生“这个页面卡死了”的观感。
 为了避免弄巧成拙，我们需要借力 throttle 的思想，打造一个“有底线”的 debounce——等你可以，但我有我的原则：delay 时间内，我可以为你重新生成定时器；但只要delay的时间到了，我必须要给用户一个响应.
@@ -274,7 +284,7 @@ function throttle(fn, delay) {
 }
 ```
 
-### 生成随机UID
+## 生成随机UID
 
 ``` javascript
 const genUid = () => {
@@ -291,7 +301,7 @@ genUid() // ;l`yCPc9A8IuK}?N6,%}
 
 ```
 
-### RGB色值生成16进制色值
+## RGB色值生成16进制色值
 
 ``` javascript
 const rgb2Hex = rgb => {
@@ -306,7 +316,7 @@ rgb2Hex('100, 50, 0') // '#643200'
 
 ```
 
-### 颜色混合
+## 颜色混合
 
 ``` javascript
 const colourBlend = (c1, c2, ratio) => {
@@ -329,7 +339,7 @@ colourBlend('#ff0000', '#3333ff', 0.5) // "#991a80"
 
 ```
 
-### 判断是否为质数
+## 判断是否为质数
 
 ``` javascript
 const mathIsPrime = n => {
@@ -350,7 +360,9 @@ mathIsPrime(0) // true
 
 ```
 
-### 目前最功能最全面多类型数据深拷贝
+## 深拷贝
+
+> 目前最功能最全面多类型数据深拷贝
 
 ``` javascript
     function deepClone(target, map = new WeakMap()) {
@@ -491,7 +503,7 @@ mathIsPrime(0) // true
 
 ```
 
-### 相对好用的时间格式转换
+## 相对好用的时间格式转换
 
 ``` javascript
 /**
@@ -528,7 +540,7 @@ if (/(y+)/.test(fmt)) {
 // hh分mm秒 -> 16分14秒
 ```
 
-### 获取指定天的时间戳
+## 获取指定天的时间戳
 
 ``` javascript
 /**
@@ -541,7 +553,7 @@ const setDate = (num) => {  return Date.now() + num * 24 * 60 * 60 * 1000}
 // 三天后的时间 -> setDate(3) = 1568363086637
 ```
 
-### js设置Cookie
+## js设置Cookie
 
 ``` javascript
 const setCookie = (name, value, Hours) => {
@@ -555,7 +567,7 @@ const setCookie = (name, value, Hours) => {
 }
 ```
 
-### js获取Cookie
+## js获取Cookie
 
 ``` javascript
 const getCookie = (name) => {
@@ -565,7 +577,7 @@ const getCookie = (name) => {
 }
 
 ```
-### js 加入收藏夹
+## js 加入收藏夹
 
 ``` javascript
 const AddFavorite = (sURL, sTitle) => {
@@ -582,7 +594,7 @@ const AddFavorite = (sURL, sTitle) => {
 
 ```
 
-### js 压缩css代码
+## js 压缩css代码
 
 ``` javascript
 const miniCss = (s) => {
