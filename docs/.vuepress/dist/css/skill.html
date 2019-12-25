@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>css 开发技巧 | 白山羊笔记</title>
+    <meta name="description" content="记录日常开发笔记">
+    <link rel="icon" href="/note/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <script src="https://s9.cnzz.com/z_stat.php?id=1278302134&amp;web_id=1278302134"></script>
+    
+    <link rel="preload" href="/note/assets/css/0.styles.70ccd1fd.css" as="style"><link rel="preload" href="/note/assets/js/app.7e36bc0c.js" as="script"><link rel="preload" href="/note/assets/js/2.4cd40cb8.js" as="script"><link rel="preload" href="/note/assets/js/3.2ba2a6fd.js" as="script"><link rel="prefetch" href="/note/assets/js/10.2e086bd7.js"><link rel="prefetch" href="/note/assets/js/11.f076dfca.js"><link rel="prefetch" href="/note/assets/js/12.5e08c56e.js"><link rel="prefetch" href="/note/assets/js/13.5d992d17.js"><link rel="prefetch" href="/note/assets/js/14.08bfe70c.js"><link rel="prefetch" href="/note/assets/js/15.79a8a00e.js"><link rel="prefetch" href="/note/assets/js/16.c674646e.js"><link rel="prefetch" href="/note/assets/js/4.252a69ff.js"><link rel="prefetch" href="/note/assets/js/5.07800011.js"><link rel="prefetch" href="/note/assets/js/6.54daff14.js"><link rel="prefetch" href="/note/assets/js/7.6128dfaa.js"><link rel="prefetch" href="/note/assets/js/8.7bc7fe97.js"><link rel="prefetch" href="/note/assets/js/9.e49fbe7c.js">
+    <link rel="stylesheet" href="/note/assets/css/0.styles.70ccd1fd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/note/" class="home-link router-link-active"><img src="/note/logo.png" alt="白山羊笔记" class="logo"> <span class="site-name can-hide">白山羊笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/WGinit/Front-end-notes.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/WGinit/Front-end-notes.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Css</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/note/css/skill.html" class="active sidebar-link">开发技巧</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note/css/skill.html#layout-skill：布局技巧" class="sidebar-link">Layout Skill：布局技巧</a></li><li class="sidebar-sub-header"><a href="/note/css/skill.html#behavior-skill：行为技巧" class="sidebar-link">Behavior Skill：行为技巧</a></li><li class="sidebar-sub-header"><a href="/note/css/skill.html#color-skill：色彩技巧" class="sidebar-link">Color Skill：色彩技巧</a></li><li class="sidebar-sub-header"><a href="/note/css/skill.html#figure-skill：图形技巧" class="sidebar-link">Figure Skill：图形技巧</a></li><li class="sidebar-sub-header"><a href="/note/css/skill.html#component-skill：组件技巧" class="sidebar-link">Component Skill：组件技巧</a></li></ul></li><li><a href="/note/css/clever.html" class="sidebar-link">奇赢异巧</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note/css/clever.html#样式问题" class="sidebar-link">样式问题</a></li><li class="sidebar-sub-header"><a href="/note/css/clever.html#兼容问题" class="sidebar-link">兼容问题</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>移动端</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小程序</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>性能优化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网络协议</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>注释</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="css-开发技巧"><a href="#css-开发技巧" class="header-anchor">#</a> css 开发技巧</h1> <h2 id="layout-skill：布局技巧"><a href="#layout-skill：布局技巧" class="header-anchor">#</a> Layout Skill：布局技巧</h2> <h4 id="使用vw定制rem自适应布局"><a href="#使用vw定制rem自适应布局" class="header-anchor">#</a> 使用vw定制rem自适应布局</h4> <p>要点：移动端使用rem布局需要通过JS设置不同屏幕宽高比的font-size，结合vw单位和calc()可脱离JS的控制</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 基于UI width=750px DPR=2的页面 */</span>
+<span class="token selector">html</span> <span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100vw / 7.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="使用writing-mode排版竖文"><a href="#使用writing-mode排版竖文" class="header-anchor">#</a> 使用writing-mode排版竖文</h4> <p>通过writing-mode调整文本排版方向</p> <p><img src="/note/assets/img/1.5a621a8b.png" alt="images"></p> <h4 id="使用text-align-last对齐两端文本"><a href="#使用text-align-last对齐两端文本" class="header-anchor">#</a> 使用text-align-last对齐两端文本</h4> <p>通过text-align-last:justify设置文本两端对齐</p> <p><img src="/note/assets/img/2.df2a936e.png" alt="images"></p> <h4 id="使用object-fit规定图像尺寸"><a href="#使用object-fit规定图像尺寸" class="header-anchor">#</a> 使用object-fit规定图像尺寸</h4> <p>通过object-fit使图像脱离background-size的约束，使用<img>来标记图像背景尺寸</p> <p><img src="/note/assets/img/3.81843aa1.png" alt="images"></p> <h4 id="使用letter-spacing排版倒序文本"><a href="#使用letter-spacing排版倒序文本" class="header-anchor">#</a> 使用letter-spacing排版倒序文本</h4> <p>通过letter-spacing设置负值字体间距将文本倒序</p> <div class="language-css extra-class"><pre class="language-css"><code>
+<span class="token selector">.reverse-text</span> <span class="token punctuation">{</span>
+	<span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+	<span class="token property">font-size</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> $red<span class="token punctuation">;</span>
+	<span class="token property">letter-spacing</span><span class="token punctuation">:</span> -100px<span class="token punctuation">;</span> // letter-spacing最少是font-size的2倍
+<span class="token punctuation">}</span>
+
+</code></pre></div><p><img src="/note/assets/img/4.3168facf.png" alt="images"></p> <h4 id="使用margin-left排版左重右轻列表"><a href="#使用margin-left排版左重右轻列表" class="header-anchor">#</a> 使用margin-left排版左重右轻列表</h4> <p>使用flexbox横向布局时，最后一个元素通过margin-left:auto实现向右对齐</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;ul class=&quot;left-list&quot;&gt;
+		&lt;li&gt;Alibaba&lt;/li&gt;
+		&lt;li&gt;Tencent&lt;/li&gt;
+		&lt;li&gt;Baidu&lt;/li&gt;
+		&lt;li&gt;Jingdong&lt;/li&gt;
+		&lt;li&gt;Ant&lt;/li&gt;
+		&lt;li&gt;Netease&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+.left-list</span> <span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+	<span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+	<span class="token property">padding</span><span class="token punctuation">:</span> 0 10px<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 600px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 60px<span class="token punctuation">;</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> $green<span class="token selector">;
+	li</span> <span class="token punctuation">{</span>
+		<span class="token property">padding</span><span class="token punctuation">:</span> 0 10px<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+		<span class="token property">background-color</span><span class="token punctuation">:</span> $orange<span class="token punctuation">;</span>
+		<span class="token property">line-height</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+		<span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+		<span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token selector">;
+		&amp; + li</span> <span class="token punctuation">{</span>
+			<span class="token property">margin-left</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token selector">&amp;:last-child</span> <span class="token punctuation">{</span>
+			<span class="token property">margin-left</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="data:image/png;base64,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" alt="images"></p> <h2 id="behavior-skill：行为技巧"><a href="#behavior-skill：行为技巧" class="header-anchor">#</a> Behavior Skill：行为技巧</h2> <h4 id="使用overflow-scrolling支持弹性滚动"><a href="#使用overflow-scrolling支持弹性滚动" class="header-anchor">#</a> 使用overflow-scrolling支持弹性滚动</h4> <p>iOS页面非body元素的滚动操作会非常卡(Android不会出现此情况)，通过overflow-scrolling:touch调用Safari原生滚动来支持弹性滚动，增加页面滚动的流畅度</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">body</span> <span class="token punctuation">{</span>
+    <span class="token property">-webkit-overflow-scrolling</span><span class="token punctuation">:</span> touch<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.elem</span> <span class="token punctuation">{</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="使用transform启动gpu硬件加速"><a href="#使用transform启动gpu硬件加速" class="header-anchor">#</a> 使用transform启动GPU硬件加速</h4> <p>有时执行动画可能会导致页面卡顿，可在特定元素中使用硬件加速来避免这个问题</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.elem</span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate3d</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">/* translateZ(0)亦可 */</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="使用-valid和-invalid校验表单"><a href="#使用-valid和-invalid校验表单" class="header-anchor">#</a> 使用:valid和:invalid校验表单</h4> <p>input使用伪类:valid和:invalid配合pattern校验表单输入的内容</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;form class=&quot;form-validation&quot;&gt;
+		&lt;div&gt;
+			&lt;label&gt;名字&lt;/label&gt;
+			&lt;input type=&quot;text&quot; placeholder=&quot;请输入你的名字(1到10个中文)&quot; pattern=&quot;^[\u4e00-\u9fa5]{1,10}$&quot; required&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;label&gt;手机&lt;/label&gt;
+			&lt;input type=&quot;text&quot; placeholder=&quot;请输入你的手机&quot; pattern=&quot;^1[3456789]\d{9}$&quot; required&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;label&gt;简介&lt;/label&gt;
+			&lt;textarea required&gt;&lt;/textarea&gt;
+		&lt;/div&gt;
+	&lt;/form&gt;
+&lt;/div&gt;
+
+.form-validation</span> <span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 500px<span class="token selector">;
+	div</span> <span class="token punctuation">{</span>
+		<span class="token property">margin-top</span><span class="token punctuation">:</span> 10px<span class="token selector">;
+		&amp;:first-child</span> <span class="token punctuation">{</span>
+			<span class="token property">margin-top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">label</span> <span class="token punctuation">{</span>
+		<span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+		<span class="token property">padding-bottom</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+		<span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+		<span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">input,
+	textarea</span> <span class="token punctuation">{</span>
+		<span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+		<span class="token property">padding</span><span class="token punctuation">:</span> 0 20px<span class="token punctuation">;</span>
+		<span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+		<span class="token property">border</span><span class="token punctuation">:</span> 1px solid #ccc<span class="token punctuation">;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+		<span class="token property">caret-color</span><span class="token punctuation">:</span> $blue<span class="token punctuation">;</span>
+		<span class="token property">transition</span><span class="token punctuation">:</span> all 300ms<span class="token selector">;
+		&amp;:valid</span> <span class="token punctuation">{</span>
+			<span class="token property">border-color</span><span class="token punctuation">:</span> $green<span class="token punctuation">;</span>
+			<span class="token property">box-shadow</span><span class="token punctuation">:</span> inset 5px 0 0 $green<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token selector">&amp;:invalid</span> <span class="token punctuation">{</span>
+			<span class="token property">border-color</span><span class="token punctuation">:</span> $red<span class="token punctuation">;</span>
+			<span class="token property">box-shadow</span><span class="token punctuation">:</span> inset 5px 0 0 $red<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">textarea</span> <span class="token punctuation">{</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 122px<span class="token punctuation">;</span>
+		<span class="token property">resize</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+		<span class="token property">line-height</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+		<span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p><img src="/note/assets/img/6.77dfe3e0.png" alt="images"></p> <h4 id="使用resize拉伸分栏"><a href="#使用resize拉伸分栏" class="header-anchor">#</a> 使用resize拉伸分栏</h4> <p>通过resize设置横向自由拉伸来调整目标元素的宽度</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;div class=&quot;stretching-column&quot;&gt;
+		&lt;div class=&quot;left&quot;&gt;
+			&lt;div class=&quot;resize-bar&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;resize-line&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;resize-text&quot;&gt;ABCDEFGHIJKLMNOPQRSTUVWXYZ&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;right&quot;&gt;ABCDEFGHIJKLMNOPQRSTUVWXYZ&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+.stretching-column</span> <span class="token punctuation">{</span>
+	<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+	<span class="token property">border</span><span class="token punctuation">:</span> 1px solid $blue<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 600px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+	<span class="token property">line-height</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+	<span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> $orange<span class="token selector">;
+	.left</span> <span class="token punctuation">{</span>
+		<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+		<span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+		<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">.right</span> <span class="token punctuation">{</span>
+		<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+		<span class="token property">padding</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+		<span class="token property">background-color</span><span class="token punctuation">:</span> #f0f0f0<span class="token punctuation">;</span>
+		<span class="token property">word-break</span><span class="token punctuation">:</span> break-all<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.resize-bar</span> <span class="token punctuation">{</span>
+	<span class="token property">overflow</span><span class="token punctuation">:</span> scroll<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">resize</span><span class="token punctuation">:</span> horizontal<span class="token selector">;
+	&amp;::-webkit-scrollbar</span> <span class="token punctuation">{</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">&amp;:hover,
+	&amp;:active</span> <span class="token punctuation">{</span>
+		<span class="token selector">&amp; ~ .resize-line</span> <span class="token punctuation">{</span>
+			<span class="token property">border-left</span><span class="token punctuation">:</span> 1px dashed $blue<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.resize-line</span> <span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+	<span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">border-left</span><span class="token punctuation">:</span> 1px solid #ccc<span class="token punctuation">;</span>
+	<span class="token property">border-right</span><span class="token punctuation">:</span> 2px solid #f0f0f0<span class="token punctuation">;</span>
+	<span class="token property">pointer-events</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.resize-text</span> <span class="token punctuation">{</span>
+	<span class="token property">overflow-x</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+	<span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">right</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+	<span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">padding</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+	<span class="token property">word-break</span><span class="token punctuation">:</span> break-all<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="/note/assets/img/7.49e5f6a1.png" alt="images"></p> <h2 id="color-skill：色彩技巧"><a href="#color-skill：色彩技巧" class="header-anchor">#</a> Color Skill：色彩技巧</h2> <h4 id="使用color改变边框颜色"><a href="#使用color改变边框颜色" class="header-anchor">#</a> 使用color改变边框颜色</h4> <p>border没有定义border-color时，设置color后，border-color会被定义成color</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.elem</span> <span class="token punctuation">{</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #f66<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="使用filter开启悼念模式"><a href="#使用filter开启悼念模式" class="header-anchor">#</a> 使用filter开启悼念模式</h4> <p>通过filter:grayscale()设置灰度模式来悼念某位去世的仁兄或悼念因灾难而去世的人们</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;div class=&quot;mourning-mode&quot;&gt;
+		&lt;img src=&quot;https://yangzw.vip/static/codepen/car.jpg&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+html</span> <span class="token punctuation">{</span>
+	<span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">grayscale</span><span class="token punctuation">(</span>100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.mourning-mode</span> <span class="token punctuation">{</span>
+	<span class="token selector">img</span> <span class="token punctuation">{</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="使用-selection改变文本选择颜色"><a href="#使用-selection改变文本选择颜色" class="header-anchor">#</a> 使用::selection改变文本选择颜色</h4> <p>通过::selection根据主题颜色自定义文本选择颜色</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;div class=&quot;select-color&quot;&gt;
+		&lt;p&gt;全局选择文字颜色&lt;/p&gt;
+		&lt;p&gt;全局选择文字颜色&lt;/p&gt;
+		&lt;p class=&quot;special&quot;&gt;局部选择文字颜色&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+::selection</span> <span class="token punctuation">{</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> $purple<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.select-color</span> <span class="token punctuation">{</span>
+	<span class="token property">line-height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+	<span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+	<span class="token property">font-size</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> $red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.special::selection</span> <span class="token punctuation">{</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> $green<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="使用linear-gradient控制背景渐变"><a href="#使用linear-gradient控制背景渐变" class="header-anchor">#</a> 使用linear-gradient控制背景渐变</h4> <p>通过linear-gradient设置背景渐变色并放大背景尺寸，添加背景移动效果</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce&quot;&gt;
+	&lt;div class=&quot;gradient-bg&quot;&gt;iCSS&lt;/div&gt;
+&lt;/div&gt;
+.gradient-bg</span> <span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+	<span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+	<span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>135deg<span class="token punctuation">,</span> $red<span class="token punctuation">,</span> $orange<span class="token punctuation">,</span> $green<span class="token punctuation">,</span> $blue<span class="token punctuation">,</span> $purple<span class="token punctuation">)</span> left center/400% 400%<span class="token punctuation">;</span>
+	<span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+	<span class="token property">font-size</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+	<span class="token property">animation</span><span class="token punctuation">:</span> move 10s infinite<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> move</span> <span class="token punctuation">{</span>
+	<span class="token selector">0%,
+	100%</span> <span class="token punctuation">{</span>
+		<span class="token property">background-position-x</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">50%</span> <span class="token punctuation">{</span>
+		<span class="token property">background-position-x</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="使用linear-gradient控制文本渐变"><a href="#使用linear-gradient控制文本渐变" class="header-anchor">#</a> 使用linear-gradient控制文本渐变</h4> <p>通过linear-gradient设置背景渐变色，配合background-clip:text对背景进行文本裁剪，添加滤镜动画</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;h1 class=&quot;gradient-text&quot;&gt;Full Stack Developer&lt;/h1&gt;
+&lt;/div&gt;
+.gradient-text</span> <span class="token punctuation">{</span>
+	<span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>90deg<span class="token punctuation">,</span> $red<span class="token punctuation">,</span> $orange<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token property">background-clip</span><span class="token punctuation">:</span> text<span class="token punctuation">;</span>
+	<span class="token property">line-height</span><span class="token punctuation">:</span> 60px<span class="token punctuation">;</span>
+	<span class="token property">font-size</span><span class="token punctuation">:</span> 60px<span class="token punctuation">;</span>
+	<span class="token property">animation</span><span class="token punctuation">:</span> hue 5s linear infinite<span class="token punctuation">;</span>
+	<span class="token property">-webkit-text-fill-color</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> hue</span> <span class="token punctuation">{</span>
+	<span class="token selector">from</span> <span class="token punctuation">{</span>
+		<span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">hue-rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">to</span> <span class="token punctuation">{</span>
+		<span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">hue-rotate</span><span class="token punctuation">(</span>-1turn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="使用caret-color改变光标颜色"><a href="#使用caret-color改变光标颜色" class="header-anchor">#</a> 使用caret-color改变光标颜色</h4> <p>通过caret-color根据主题颜色自定义光标颜色</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">textarea</span> <span class="token punctuation">{</span>
+		<span class="token property">caret-color</span><span class="token punctuation">:</span> $blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="使用-scrollbar改变滚动条样式"><a href="#使用-scrollbar改变滚动条样式" class="header-anchor">#</a> 使用:scrollbar改变滚动条样式</h4> <p>通过scrollbar的scrollbar-track和scrollbar-thumb等属性来自定义滚动条样式</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.scroll-indicator</span> <span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+	<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+	<span class="token property">border</span><span class="token punctuation">:</span> 1px solid $purple<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token selector">;
+	&amp;::after</span> <span class="token punctuation">{</span>
+		<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+		<span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token property">right</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+		<span class="token property">top</span><span class="token punctuation">:</span> 2px<span class="token punctuation">;</span>
+		<span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token property">background-color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+		<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.article</span> <span class="token punctuation">{</span>
+	<span class="token property">overflow</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token selector">;
+	&amp;::-webkit-scrollbar</span> <span class="token punctuation">{</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">&amp;::-webkit-scrollbar-track</span> <span class="token punctuation">{</span>
+		<span class="token property">background-color</span><span class="token punctuation">:</span> #f0f0f0<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">&amp;::-webkit-scrollbar-thumb</span> <span class="token punctuation">{</span>
+		<span class="token property">border-radius</span><span class="token punctuation">:</span> 2px<span class="token punctuation">;</span>
+		<span class="token property">background-color</span><span class="token punctuation">:</span> $purple<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">article</span> <span class="token punctuation">{</span>
+		<span class="token property">padding</span><span class="token punctuation">:</span> 0 20px<span class="token punctuation">;</span>
+		<span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right top<span class="token punctuation">,</span> $red 50%<span class="token punctuation">,</span> #f0f0f0 50%<span class="token punctuation">)</span> no-repeat<span class="token punctuation">;</span>
+		<span class="token property">background-size</span><span class="token punctuation">:</span> 100% <span class="token function">calc</span><span class="token punctuation">(</span>100% - 298px + 5px<span class="token punctuation">)</span><span class="token selector">;
+		&gt; *</span> <span class="token punctuation">{</span>
+			<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+			<span class="token property">z-index</span><span class="token punctuation">:</span> 9<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">h1</span> <span class="token punctuation">{</span>
+		<span class="token property">line-height</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+		<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+		<span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+		<span class="token property">font-size</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">p</span> <span class="token punctuation">{</span>
+		<span class="token property">margin-top</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+		<span class="token property">line-height</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+		<span class="token property">text-indent</span><span class="token punctuation">:</span> 2em<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="figure-skill：图形技巧"><a href="#figure-skill：图形技巧" class="header-anchor">#</a> Figure Skill：图形技巧</h2> <h4 id="使用div描绘各种图形"><a href="#使用div描绘各种图形" class="header-anchor">#</a> 使用div描绘各种图形</h4> <p>div配合其伪元素(::before、::after)通过clip、transform等方式绘制各种图形</p> <h4 id="使用mask雕刻镂空背景"><a href="#使用mask雕刻镂空背景" class="header-anchor">#</a> 使用mask雕刻镂空背景</h4> <div class="language-css extra-class"><pre class="language-css"><code>&lt;div class=<span class="token string">&quot;bruce pr flex-ct-x&quot;</span>&gt;
+	&lt;div class=<span class="token string">&quot;mask-layer&quot;</span>&gt;&lt;/div&gt;
+&lt;/div&gt;
+$<span class="token property">mask-bg</span><span class="token punctuation">:</span> <span class="token string">&quot;https://yangzw.vip/static/codepen/mask-bg.jpg&quot;</span><span class="token punctuation">;</span>
+$<span class="token property">mask-text</span><span class="token punctuation">:</span> <span class="token string">&quot;https://yangzw.vip/static/codepen/mask-text.jpg&quot;</span><span class="token punctuation">;</span>
+$<span class="token property">logo</span><span class="token punctuation">:</span> <span class="token string">&quot;https://yangzw.vip/static/codepen/logo-netease.svg&quot;</span><span class="token selector">;
+
+.bruce</span> <span class="token punctuation">{</span>
+	<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token selector">;
+	&amp;::after</span> <span class="token punctuation">{</span>
+		<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+		<span class="token property">left</span><span class="token punctuation">:</span> -20px<span class="token punctuation">;</span>
+		<span class="token property">right</span><span class="token punctuation">:</span> -20px<span class="token punctuation">;</span>
+		<span class="token property">top</span><span class="token punctuation">:</span> -20px<span class="token punctuation">;</span>
+		<span class="token property">bottom</span><span class="token punctuation">:</span> -20px<span class="token punctuation">;</span>
+		<span class="token property">background</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>$mask-bg<span class="token punctuation">)</span></span> no-repeat center/cover<span class="token punctuation">;</span>
+		<span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>10px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.mask-layer</span> <span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+	<span class="token property">z-index</span><span class="token punctuation">:</span> 9<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 600px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+	<span class="token property">background</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>$mask-text<span class="token punctuation">)</span></span> left center/150% auto<span class="token punctuation">;</span>
+	<span class="token property">mask</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>$logo<span class="token punctuation">)</span></span> center/cover<span class="token punctuation">;</span>
+	<span class="token property">animation</span><span class="token punctuation">:</span> move 10s infinite<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> move</span> <span class="token punctuation">{</span>
+	<span class="token selector">0%</span> <span class="token punctuation">{</span>
+		<span class="token property">background-position-x</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">50%</span> <span class="token punctuation">{</span>
+		<span class="token property">background-position-x</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="使用linear-gradient描绘波浪线"><a href="#使用linear-gradient描绘波浪线" class="header-anchor">#</a> 使用linear-gradient描绘波浪线</h4> <p>通过linear-gradient绘制波浪线</p> <div class="language-css extra-class"><pre class="language-css"><code>&lt;div class=<span class="token string">&quot;bruce flex-ct-x&quot;</span>&gt;
+	&lt;p class=<span class="token string">&quot;waveline-text&quot;</span>&gt;波浪线文字&lt;/p&gt;
+&lt;/div&gt;
+<span class="token atrule"><span class="token rule">@mixin</span> <span class="token function">waveline</span><span class="token punctuation">(</span>$h<span class="token punctuation">,</span> $<span class="token property">color</span><span class="token punctuation">:</span> $red<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token selector">;
+	&amp;::after</span> <span class="token punctuation">{</span>
+		<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+		<span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token property">top</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> $h<span class="token punctuation">;</span>
+		<span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>135deg<span class="token punctuation">,</span> transparent<span class="token punctuation">,</span> transparent 45%<span class="token punctuation">,</span> $color<span class="token punctuation">,</span> transparent 55%<span class="token punctuation">,</span> transparent 100%<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>45deg<span class="token punctuation">,</span> transparent<span class="token punctuation">,</span> transparent 45%<span class="token punctuation">,</span> $color<span class="token punctuation">,</span> transparent 55%<span class="token punctuation">,</span> transparent 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">background-size</span><span class="token punctuation">:</span> $h * 2 $h * 2<span class="token punctuation">;</span>
+		<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.waveline-text</span> <span class="token punctuation">{</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+	<span class="token property">line-height</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+	<span class="token property">letter-spacing</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+	<span class="token atrule"><span class="token rule">@include</span> <span class="token function">waveline</span><span class="token punctuation">(</span>10px<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="使用linear-gradient描绘彩带"><a href="#使用linear-gradient描绘彩带" class="header-anchor">#</a> 使用linear-gradient描绘彩带</h4> <p>通过linear-gradient绘制间断颜色的彩带</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;div class=&quot;colour-bar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+.colour-bar</span> <span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+	<span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">repeating-linear-gradient</span><span class="token punctuation">(</span>90deg<span class="token punctuation">,</span> $red<span class="token punctuation">,</span> $red 50px<span class="token punctuation">,</span> $purple 50px<span class="token punctuation">,</span> $purple 100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="data:image/png;base64,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" alt="images"></p> <h4 id="使用conic-gradient描绘饼图"><a href="#使用conic-gradient描绘饼图" class="header-anchor">#</a> 使用conic-gradient描绘饼图</h4> <p>通过conic-gradient绘制多种色彩的饼图</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;div class=&quot;pie-chart&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+.pie-chart</span> <span class="token punctuation">{</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+	<span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">conic-gradient</span><span class="token punctuation">(</span>$red 0 25%<span class="token punctuation">,</span> $purple 25% 30%<span class="token punctuation">,</span> $orange 30% 55%<span class="token punctuation">,</span> $blue 55% 70%<span class="token punctuation">,</span> $green 70% 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="/note/assets/img/9.8809623a.png" alt="images"></p> <h4 id="使用linear-gradient描绘方格背景"><a href="#使用linear-gradient描绘方格背景" class="header-anchor">#</a> 使用linear-gradient描绘方格背景</h4> <p>使用linear-gradient绘制间断颜色的彩带进行交互生成方格</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;div class=&quot;square-bg&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+.square-bg</span> <span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+	<span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>45deg<span class="token punctuation">,</span> #eee 25%<span class="token punctuation">,</span> transparent 25%<span class="token punctuation">,</span> transparent 75%<span class="token punctuation">,</span> #eee 75%<span class="token punctuation">)</span><span class="token punctuation">,</span>
+		<span class="token function">linear-gradient</span><span class="token punctuation">(</span>45deg<span class="token punctuation">,</span> #eee 25%<span class="token punctuation">,</span> transparent 25%<span class="token punctuation">,</span> transparent 75%<span class="token punctuation">,</span> #eee 75%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token property">background-position</span><span class="token punctuation">:</span> 0 0<span class="token punctuation">,</span> 20px 20px<span class="token punctuation">;</span>
+	<span class="token property">background-size</span><span class="token punctuation">:</span> 40px 40px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="data:image/png;base64,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" alt="images"></p> <h4 id="使用box-shadow描绘单侧投影"><a href="#使用box-shadow描绘单侧投影" class="header-anchor">#</a> 使用box-shadow描绘单侧投影</h4> <p>通过box-shadow生成投影，且模糊半径和负的扩张半径一致，使投影偏向一侧</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;div class=&quot;aside-shadow&quot;&gt;投影&lt;/div&gt;
+&lt;/div&gt;
+.aside-shadow</span> <span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+	<span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+	<span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+	<span class="token property">border</span><span class="token punctuation">:</span> 1px solid<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+	<span class="token property">box-shadow</span><span class="token punctuation">:</span> -7px 0 5px -5px $orange<span class="token punctuation">;</span>
+	<span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+	<span class="token property">font-size</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> $orange<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="data:image/png;base64,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" alt="images"></p> <h4 id="使用filter描绘头像彩色阴影"><a href="#使用filter描绘头像彩色阴影" class="header-anchor">#</a> 使用filter描绘头像彩色阴影</h4> <p>通过filter:blur() brightness() opacity()模拟阴影效果</p> <div class="language-css extra-class"><pre class="language-css"><code>&lt;div class=<span class="token string">&quot;bruce flex-ct-x&quot;</span>&gt;
+	&lt;div class=<span class="token string">&quot;avatar-shadow&quot;</span>&gt;&lt;/div&gt;
+&lt;/div&gt;
+$<span class="token property">avatar</span><span class="token punctuation">:</span> <span class="token string">&quot;https://yangzw.vip/static/codepen/thor.jpg&quot;</span><span class="token selector">;
+
+.avatar-shadow</span> <span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+	<span class="token property">background</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>$avatar<span class="token punctuation">)</span></span> no-repeat center/cover<span class="token selector">;
+	&amp;::after</span> <span class="token punctuation">{</span>
+		<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+		<span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token property">top</span><span class="token punctuation">:</span> 10%<span class="token punctuation">;</span>
+		<span class="token property">z-index</span><span class="token punctuation">:</span> -1<span class="token punctuation">;</span>
+		<span class="token property">border-radius</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+		<span class="token property">background</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+		<span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>10px<span class="token punctuation">)</span> <span class="token function">brightness</span><span class="token punctuation">(</span>80%<span class="token punctuation">)</span> <span class="token function">opacity</span><span class="token punctuation">(</span>.8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+		<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>.95<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="/note/assets/img/12.8f22d2e3.png" alt="images"></p> <h4 id="使用box-shadow裁剪图像"><a href="#使用box-shadow裁剪图像" class="header-anchor">#</a> 使用box-shadow裁剪图像</h4> <p>通过box-shadow模拟蒙层实现中间镂空</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;div class=&quot;img-cliper&quot;&gt;
+		&lt;img src=&quot;https://yangzw.vip/static/codepen/gz.jpg&quot;&gt;
+		&lt;div class=&quot;mask&quot;&gt;
+			&lt;i&gt;&lt;/i&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+.img-cliper</span> <span class="token punctuation">{</span>
+	<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token selector">;
+	img</span> <span class="token punctuation">{</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">i</span> <span class="token punctuation">{</span>
+		<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+		<span class="token property">left</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+		<span class="token property">top</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+		<span class="token property">border-radius</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+		<span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 0 9999px <span class="token function">rgba</span><span class="token punctuation">(</span>#000<span class="token punctuation">,</span> .5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">.mask</span> <span class="token punctuation">{</span>
+		<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+		<span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="/note/assets/img/13.f6d66c66.png" alt="images"></p> <h4 id="使用outline描绘内边框"><a href="#使用outline描绘内边框" class="header-anchor">#</a> 使用outline描绘内边框</h4> <p>通过outline设置轮廓进行描边，可设置outline-offset设置内描边</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;div class=&quot;outside-border&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+.outside-border</span> <span class="token punctuation">{</span>
+	<span class="token property">outline</span><span class="token punctuation">:</span> 10px dashed $blue<span class="token punctuation">;</span>
+	<span class="token property">outline-offset</span><span class="token punctuation">:</span> -50px<span class="token punctuation">;</span>
+	<span class="token property">border</span><span class="token punctuation">:</span> 10px dashed $orange<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> $green<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="data:image/png;base64,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" alt="images"></p> <h2 id="component-skill：组件技巧"><a href="#component-skill：组件技巧" class="header-anchor">#</a> Component Skill：组件技巧</h2> <h4 id="下划线跟随导航栏"><a href="#下划线跟随导航栏" class="header-anchor">#</a> 下划线跟随导航栏</h4> <p>下划线跟随鼠标移动的导航栏</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;ul class=&quot;underline-navbar&quot;&gt;
+		&lt;li&gt;Alibaba阿里巴巴&lt;/li&gt;
+		&lt;li&gt;Tencent腾讯&lt;/li&gt;
+		&lt;li&gt;Baidu百度&lt;/li&gt;
+		&lt;li&gt;Jingdong京东&lt;/li&gt;
+		&lt;li&gt;Ant蚂蚁金服&lt;/li&gt;
+		&lt;li&gt;Netease网易&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+.underline-navbar</span> <span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token selector">;
+	li</span> <span class="token punctuation">{</span>
+		<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+		<span class="token property">padding</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+		<span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+		<span class="token property">font-size</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+		<span class="token property">color</span><span class="token punctuation">:</span> $blue<span class="token punctuation">;</span>
+		<span class="token property">transition</span><span class="token punctuation">:</span> all 300ms<span class="token selector">;
+		&amp;::before</span> <span class="token punctuation">{</span>
+			<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+			<span class="token property">left</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+			<span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+			<span class="token property">border-bottom</span><span class="token punctuation">:</span> 2px solid transparent<span class="token punctuation">;</span>
+			<span class="token property">width</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+			<span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+			<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+			<span class="token property">transition</span><span class="token punctuation">:</span> all 300ms<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token selector">&amp;:active</span> <span class="token punctuation">{</span>
+			<span class="token property">background-color</span><span class="token punctuation">:</span> $blue<span class="token punctuation">;</span>
+			<span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token selector">&amp;:hover</span> <span class="token punctuation">{</span>
+			<span class="token selector">&amp;::before</span> <span class="token punctuation">{</span>
+				<span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+				<span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+				<span class="token property">z-index</span><span class="token punctuation">:</span> -1<span class="token punctuation">;</span>
+				<span class="token property">border-bottom-color</span><span class="token punctuation">:</span> $blue<span class="token punctuation">;</span>
+				<span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+				<span class="token property">transition-delay</span><span class="token punctuation">:</span> 100ms<span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+			<span class="token selector">&amp; + li::before</span> <span class="token punctuation">{</span>
+				<span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="故障文本"><a href="#故障文本" class="header-anchor">#</a> 故障文本</h4> <p>显示器故障形式的文本</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;div class=&quot;fault-text&quot; data-text=&quot;ERROR&quot;&gt;ERROR&lt;/div&gt;
+&lt;/div&gt;
+.bruce</span> <span class="token punctuation">{</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> #000<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.fault-text</span> <span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+	<span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+	<span class="token property">font-size</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token selector">;
+	&amp;::before,
+	&amp;::after</span> <span class="token punctuation">{</span>
+		<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+		<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+		<span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token property">background-color</span><span class="token punctuation">:</span> #000<span class="token punctuation">;</span>
+		<span class="token property">clip</span><span class="token punctuation">:</span> <span class="token function">rect</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 900px<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+		<span class="token property">content</span><span class="token punctuation">:</span> <span class="token function">attr</span><span class="token punctuation">(</span>data-text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">animation</span><span class="token punctuation">:</span> shake 3s linear infinite alternate-reverse<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">&amp;::before</span> <span class="token punctuation">{</span>
+		<span class="token property">left</span><span class="token punctuation">:</span> -2px<span class="token punctuation">;</span>
+		<span class="token property">text-shadow</span><span class="token punctuation">:</span> 1px 0 $blue<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">&amp;::after</span> <span class="token punctuation">{</span>
+		<span class="token property">left</span><span class="token punctuation">:</span> 2px<span class="token punctuation">;</span>
+		<span class="token property">text-shadow</span><span class="token punctuation">:</span> -1px 0 $red<span class="token punctuation">;</span>
+		<span class="token property">animation-duration</span><span class="token punctuation">:</span> 2s<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> shake</span> <span class="token punctuation">{</span>
+	$<span class="token property">steps</span><span class="token punctuation">:</span> 20<span class="token punctuation">;</span>
+	<span class="token atrule"><span class="token rule">@for</span> $i from 0 through $steps</span> <span class="token punctuation">{</span>
+		<span class="token selector">#</span><span class="token punctuation">{</span><span class="token function">percentage</span><span class="token punctuation">(</span>$i * <span class="token punctuation">(</span>1 / $steps<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span> <span class="token punctuation">{</span>
+			<span class="token property">clip</span><span class="token punctuation">:</span> <span class="token function">rect</span><span class="token punctuation">(</span><span class="token function">random</span><span class="token punctuation">(</span>100<span class="token punctuation">)</span> + px<span class="token punctuation">,</span> 9999px<span class="token punctuation">,</span> <span class="token function">random</span><span class="token punctuation">(</span>100<span class="token punctuation">)</span> + px<span class="token punctuation">,</span> 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="/note/assets/img/15.64ec8c2d.png" alt="images"></p> <h4 id="状态悬浮球"><a href="#状态悬浮球" class="header-anchor">#</a> 状态悬浮球</h4> <p>展示当前状态的悬浮球</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;div class=&quot;state-ball warning&quot;&gt;
+		&lt;div class=&quot;wave&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+.state-ball</span> <span class="token punctuation">{</span>
+	<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+	<span class="token property">padding</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+	<span class="token property">border</span><span class="token punctuation">:</span> 3px solid $green<span class="token punctuation">;</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> #fff<span class="token selector">;
+	&amp;::before,
+	&amp;::after</span> <span class="token punctuation">{</span>
+		<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+		<span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+		<span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token property">z-index</span><span class="token punctuation">:</span> 20<span class="token punctuation">;</span>
+		<span class="token property">margin-left</span><span class="token punctuation">:</span> -100px<span class="token punctuation">;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+		<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">&amp;::before</span> <span class="token punctuation">{</span>
+		<span class="token property">margin-top</span><span class="token punctuation">:</span> -150px<span class="token punctuation">;</span>
+		<span class="token property">border-radius</span><span class="token punctuation">:</span> 45%<span class="token punctuation">;</span>
+		<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>#fff<span class="token punctuation">,</span> .5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">animation</span><span class="token punctuation">:</span> rotate 10s linear -5s infinite<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">&amp;::after</span> <span class="token punctuation">{</span>
+		<span class="token property">margin-top</span><span class="token punctuation">:</span> -160px<span class="token punctuation">;</span>
+		<span class="token property">border-radius</span><span class="token punctuation">:</span> 40%<span class="token punctuation">;</span>
+		<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>#fff<span class="token punctuation">,</span> .8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">animation</span><span class="token punctuation">:</span> rotate 15s infinite<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">&amp;.warning</span> <span class="token punctuation">{</span>
+		<span class="token property">border-color</span><span class="token punctuation">:</span> $orange<span class="token selector">;
+		.wave</span> <span class="token punctuation">{</span>
+			<span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>-180deg<span class="token punctuation">,</span> #f0c78a 13%<span class="token punctuation">,</span> $orange 91%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">&amp;.danger</span> <span class="token punctuation">{</span>
+		<span class="token property">border-color</span><span class="token punctuation">:</span> $red<span class="token selector">;
+		.wave</span> <span class="token punctuation">{</span>
+			<span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>-180deg<span class="token punctuation">,</span> #f78989 13%<span class="token punctuation">,</span> $red 91%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.wave</span> <span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>-180deg<span class="token punctuation">,</span> #af8 13%<span class="token punctuation">,</span> $green 91%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> rotate</span> <span class="token punctuation">{</span>
+	<span class="token selector">from</span> <span class="token punctuation">{</span>
+		<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">to</span> <span class="token punctuation">{</span>
+		<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>1turn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="/note/assets/img/16.2933c57f.png" alt="images"></p> <h4 id="粘粘球"><a href="#粘粘球" class="header-anchor">#</a> 粘粘球</h4> <p>相交粘粘效果的双球回弹运动</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;div class=&quot;sticky-ball&quot;&gt;
+		&lt;div class=&quot;ball-1&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;ball-2&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+.bruce</span> <span class="token punctuation">{</span>
+	<span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">contrast</span><span class="token punctuation">(</span>10<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.sticky-ball</span> <span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 320px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+	<span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">contrast</span><span class="token punctuation">(</span>10<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">div[class*=ball-]</span> <span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+	<span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">padding</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> $red<span class="token punctuation">;</span>
+	<span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token property">animation</span><span class="token punctuation">:</span> 6s infinite<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.ball-1</span> <span class="token punctuation">{</span>
+	<span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">animation-name</span><span class="token punctuation">:</span> move-1 <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.ball-2</span> <span class="token punctuation">{</span>
+	<span class="token property">left</span><span class="token punctuation">:</span> 240px<span class="token punctuation">;</span>
+	<span class="token property">animation-name</span><span class="token punctuation">:</span> move-2 <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> move-1</span> <span class="token punctuation">{</span>
+	<span class="token selector">0%,
+	20%,
+	100%</span> <span class="token punctuation">{</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">50%</span> <span class="token punctuation">{</span>
+		<span class="token property">left</span><span class="token punctuation">:</span> 110px<span class="token punctuation">;</span>
+		<span class="token property">top</span><span class="token punctuation">:</span> -15px<span class="token punctuation">;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 110px<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 110px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">85%</span> <span class="token punctuation">{</span>
+		<span class="token property">left</span><span class="token punctuation">:</span> 75px<span class="token punctuation">;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 90px<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 70px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">90%</span> <span class="token punctuation">{</span>
+		<span class="token property">top</span><span class="token punctuation">:</span> -2px<span class="token punctuation">;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 75px<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 85px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> move-2</span> <span class="token punctuation">{</span>
+	<span class="token selector">0%,
+	20%,
+	100%</span> <span class="token punctuation">{</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">50%</span> <span class="token punctuation">{</span>
+		<span class="token property">left</span><span class="token punctuation">:</span> 110px<span class="token punctuation">;</span>
+		<span class="token property">top</span><span class="token punctuation">:</span> -15px<span class="token punctuation">;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 110px<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 110px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">85%</span> <span class="token punctuation">{</span>
+		<span class="token property">left</span><span class="token punctuation">:</span> 165px<span class="token punctuation">;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 90px<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 70px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">90%</span> <span class="token punctuation">{</span>
+		<span class="token property">top</span><span class="token punctuation">:</span> -2px<span class="token punctuation">;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 75px<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 85px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="data:image/png;base64,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" alt="images"></p> <h4 id="商城票券"><a href="#商城票券" class="header-anchor">#</a> 商城票券</h4> <p>边缘带孔和中间折痕的票劵</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">&lt;div class=&quot;bruce flex-ct-x&quot;&gt;
+	&lt;div class=&quot;mall-ticket&quot;&gt;
+		&lt;h3&gt;100元&lt;/h3&gt;
+		&lt;p&gt;网易考拉代金券&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+.mall-ticket</span> <span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+	<span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">radial-gradient</span><span class="token punctuation">(</span>circle at right top<span class="token punctuation">,</span> transparent 10px<span class="token punctuation">,</span> $red 0<span class="token punctuation">)</span> top left/100px 51% no-repeat<span class="token punctuation">,</span>
+		<span class="token function">radial-gradient</span><span class="token punctuation">(</span>circle at right bottom<span class="token punctuation">,</span> transparent 10px<span class="token punctuation">,</span> $red 0<span class="token punctuation">)</span> bottom left/100px 51% no-repeat<span class="token punctuation">,</span>
+		<span class="token function">radial-gradient</span><span class="token punctuation">(</span>circle at left top<span class="token punctuation">,</span> transparent 10px<span class="token punctuation">,</span> #ccc 0<span class="token punctuation">)</span> top right/200px 51% no-repeat<span class="token punctuation">,</span>
+		<span class="token function">radial-gradient</span><span class="token punctuation">(</span>circle at left bottom<span class="token punctuation">,</span> transparent 10px<span class="token punctuation">,</span> #ccc 0<span class="token punctuation">)</span> bottom right/200px 51% no-repeat<span class="token punctuation">;</span>
+	<span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">drop-shadow</span><span class="token punctuation">(</span>2px 2px 2px <span class="token function">rgba</span><span class="token punctuation">(</span>#fff<span class="token punctuation">,</span> .2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token property">line-height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+	<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token selector">;
+	&amp;::before</span> <span class="token punctuation">{</span>
+		<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+		<span class="token property">left</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+		<span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token property">margin</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+		<span class="token property">border</span><span class="token punctuation">:</span> 1px dashed $purple<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+		<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">&amp;::after</span> <span class="token punctuation">{</span>
+		<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+		<span class="token property">left</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+		<span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+		<span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>180deg<span class="token punctuation">,</span> #ccc 5px<span class="token punctuation">,</span> transparent 5px<span class="token punctuation">,</span> transparent<span class="token punctuation">)</span><span class="token punctuation">,</span>
+			<span class="token function">radial-gradient</span><span class="token punctuation">(</span>10px circle at 5px 10px<span class="token punctuation">,</span> transparent 5px<span class="token punctuation">,</span> #ccc 5px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">background-size</span><span class="token punctuation">:</span> 5px 15px<span class="token punctuation">;</span>
+		<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">h3</span> <span class="token punctuation">{</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+		<span class="token property">font-size</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">p</span> <span class="token punctuation">{</span>
+		<span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+		<span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+		<span class="token property">font-size</span><span class="token punctuation">:</span> 18px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="data:image/png;base64,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" alt="images"></p> <h4 id="三维立方体"><a href="#三维立方体" class="header-anchor">#</a> 三维立方体</h4> <p>三维建模的立方体</p> <div class="language-css extra-class"><pre class="language-css"><code>&lt;div class=<span class="token string">&quot;bruce flex-ct-x&quot;</span>&gt;
+	&lt;div class=<span class="token string">&quot;td-cube&quot;</span>&gt;
+		&lt;ul&gt;
+			&lt;li class=<span class="token string">&quot;front&quot;</span>&gt;1&lt;/li&gt;
+			&lt;li class=<span class="token string">&quot;back&quot;</span>&gt;2&lt;/li&gt;
+			&lt;li class=<span class="token string">&quot;top&quot;</span>&gt;3&lt;/li&gt;
+			&lt;li class=<span class="token string">&quot;bottom&quot;</span>&gt;4&lt;/li&gt;
+			&lt;li class=<span class="token string">&quot;left&quot;</span>&gt;5&lt;/li&gt;
+			&lt;li class=<span class="token string">&quot;right&quot;</span>&gt;6&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+$<span class="token property">width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+$<span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+$<span class="token property">length</span><span class="token punctuation">:</span> 150px<span class="token selector">;
+
+.td-cube</span> <span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> $width<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> $height<span class="token punctuation">;</span>
+	<span class="token property">perspective</span><span class="token punctuation">:</span> 1000px<span class="token selector">;
+	ul</span> <span class="token punctuation">{</span>
+		<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+		<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>-15deg<span class="token punctuation">)</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>15deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">transform-style</span><span class="token punctuation">:</span> preserve-3d<span class="token punctuation">;</span>
+		<span class="token property">animation</span><span class="token punctuation">:</span> rotate 5s infinite linear<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">li</span> <span class="token punctuation">{</span>
+		<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+		<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+		<span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+		<span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> $width<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> $height<span class="token punctuation">;</span>
+		<span class="token property">opacity</span><span class="token punctuation">:</span> .8<span class="token punctuation">;</span>
+		<span class="token property">font-size</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+		<span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.front</span> <span class="token punctuation">{</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> $red<span class="token punctuation">;</span>
+	<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>$length / 2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.back</span> <span class="token punctuation">{</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> $purple<span class="token punctuation">;</span>
+	<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>180deg<span class="token punctuation">)</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>$length / 2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.top</span> <span class="token punctuation">{</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> $orange<span class="token punctuation">;</span>
+	<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>90deg<span class="token punctuation">)</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>$height / 2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.bottom</span> <span class="token punctuation">{</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> $blue<span class="token punctuation">;</span>
+	<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>-90deg<span class="token punctuation">)</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>$height / 2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.left</span> <span class="token punctuation">{</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> $cyan<span class="token punctuation">;</span>
+	<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>-90deg<span class="token punctuation">)</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>$width / 2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.right</span> <span class="token punctuation">{</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> $green<span class="token punctuation">;</span>
+	<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>90deg<span class="token punctuation">)</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>$width / 2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> rotate</span> <span class="token punctuation">{</span>
+	<span class="token selector">from</span> <span class="token punctuation">{</span>
+		<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">to</span> <span class="token punctuation">{</span>
+		<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>-1turn<span class="token punctuation">)</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>-1turn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="/note/assets/img/19.7fe26810.png" alt="images"></p> <h4 id="自适应相册"><a href="#自适应相册" class="header-anchor">#</a> 自适应相册</h4> <p>自适应照片数量的相册九宫格相册、微信相册、图集</p> <div class="language-css extra-class"><pre class="language-css"><code>&lt;div class=<span class="token string">&quot;bruce flex-ct-x&quot;</span>&gt;
+	&lt;ul class=<span class="token string">&quot;response-album&quot;</span>&gt;
+		&lt;li class=<span class="token string">&quot;item&quot;</span>&gt;&lt;img src=<span class="token string">&quot;https://yangzw.vip/static/codepen/ab-3.jpg&quot;</span>&gt;&lt;/li&gt;
+		&lt;li class=<span class="token string">&quot;item&quot;</span>&gt;&lt;img src=<span class="token string">&quot;https://yangzw.vip/static/codepen/ab-3.jpg&quot;</span>&gt;&lt;/li&gt;
+		&lt;li class=<span class="token string">&quot;item&quot;</span>&gt;&lt;img src=<span class="token string">&quot;https://yangzw.vip/static/codepen/ab-3.jpg&quot;</span>&gt;&lt;/li&gt;
+		&lt;li class=<span class="token string">&quot;item&quot;</span>&gt;&lt;img src=<span class="token string">&quot;https://yangzw.vip/static/codepen/ab-3.jpg&quot;</span>&gt;&lt;/li&gt;
+		&lt;li class=<span class="token string">&quot;item&quot;</span>&gt;&lt;img src=<span class="token string">&quot;https://yangzw.vip/static/codepen/ab-3.jpg&quot;</span>&gt;&lt;/li&gt;
+		&lt;li class=<span class="token string">&quot;item&quot;</span>&gt;&lt;img src=<span class="token string">&quot;https://yangzw.vip/static/codepen/ab-3.jpg&quot;</span>&gt;&lt;/li&gt;
+		&lt;li class=<span class="token string">&quot;item&quot;</span>&gt;&lt;img src=<span class="token string">&quot;https://yangzw.vip/static/codepen/ab-3.jpg&quot;</span>&gt;&lt;/li&gt;
+		&lt;li class=<span class="token string">&quot;item&quot;</span>&gt;&lt;img src=<span class="token string">&quot;https://yangzw.vip/static/codepen/ab-3.jpg&quot;</span>&gt;&lt;/li&gt;
+		&lt;li class=<span class="token string">&quot;item&quot;</span>&gt;&lt;img src=<span class="token string">&quot;https://yangzw.vip/static/codepen/ab-3.jpg&quot;</span>&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+<span class="token atrule"><span class="token rule">@mixin</span> <span class="token function">square</span><span class="token punctuation">(</span>$<span class="token property">count</span><span class="token punctuation">:</span> 2<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+	<span class="token selector">$length: calc((100% - #</span><span class="token punctuation">{</span>$count<span class="token punctuation">}</span> <span class="token selector">* 10px) / #</span><span class="token punctuation">{</span>$count<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> $length<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> $length<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.response-album</span> <span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+	<span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
+	<span class="token property">justify-content</span><span class="token punctuation">:</span> flex-start<span class="token punctuation">;</span>
+	<span class="token property">align-content</span><span class="token punctuation">:</span> flex-start<span class="token punctuation">;</span>
+	<span class="token property">padding</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+	<span class="token property">border</span><span class="token punctuation">:</span> 1px solid #ccc<span class="token punctuation">;</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 400px<span class="token selector">;
+	li</span> <span class="token punctuation">{</span>
+		<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+		<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+		<span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+		<span class="token property">margin</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+		<span class="token property">background-color</span><span class="token punctuation">:</span> #f0f0f0<span class="token punctuation">;</span>
+		<span class="token atrule"><span class="token rule">@include</span> <span class="token function">square</span><span class="token punctuation">(</span>3<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">img</span> <span class="token punctuation">{</span>
+		<span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+
+		<span class="token property">object-fit</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token selector">// 一个元素
+.item:only-child</span> <span class="token punctuation">{</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+	<span class="token property">max-width</span><span class="token punctuation">:</span> 80%<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+	<span class="token property">max-height</span><span class="token punctuation">:</span> 80%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">// 两个元素
+.item:first-child:nth-last-child(2),
+.item:first-child:nth-last-child(2) ~ .item:nth-child(2)</span> <span class="token punctuation">{</span>
+	<span class="token atrule"><span class="token rule">@include</span> <span class="token function">square</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(2)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> 10px 0 0 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(2) ~ .item:nth-child(2)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> 0 10px 10px 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">// 三个元素
+.item:first-child:nth-last-child(3),
+.item:first-child:nth-last-child(3) ~ .item:nth-child(2),
+.item:first-child:nth-last-child(3) ~ .item:nth-child(3)</span> <span class="token punctuation">{</span>
+	<span class="token atrule"><span class="token rule">@include</span> <span class="token function">square</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(3)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(3) ~ .item:nth-child(2)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(3) ~ .item:nth-child(3)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">// 四个元素
+.item:first-child:nth-last-child(4),
+.item:first-child:nth-last-child(4) ~ .item:nth-child(2),
+.item:first-child:nth-last-child(4) ~ .item:nth-child(3),
+.item:first-child:nth-last-child(4) ~ .item:nth-child(4)</span> <span class="token punctuation">{</span>
+	<span class="token atrule"><span class="token rule">@include</span> <span class="token function">square</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(4)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(4) ~ .item:nth-child(2)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(4) ~ .item:nth-child(3)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(4) ~ .item:nth-child(4)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-bottom-right-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">// 五个元素
+.item:first-child:nth-last-child(5)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(5) ~ .item:nth-child(3)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(5) ~ .item:nth-child(4)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">// 六个元素
+.item:first-child:nth-last-child(6)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(6) ~ .item:nth-child(3)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(6) ~ .item:nth-child(4)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(6) ~ .item:nth-child(6)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-bottom-right-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">// 七个元素
+.item:first-child:nth-last-child(7)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(7) ~ .item:nth-child(3)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(7) ~ .item:nth-child(7)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">// 八个元素
+.item:first-child:nth-last-child(8)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(8) ~ .item:nth-child(3)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(8) ~ .item:nth-child(7)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">// 九个元素
+.item:first-child:nth-last-child(9)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(9) ~ .item:nth-child(3)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(9) ~ .item:nth-child(7)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:first-child:nth-last-child(9) ~ .item:nth-child(9)</span> <span class="token punctuation">{</span>
+	<span class="token property">border-bottom-right-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="/note/assets/img/20.08d9bce2.png" alt="images"></p> <h4 id="圆角进度条"><a href="#圆角进度条" class="header-anchor">#</a> 圆角进度条</h4> <p>单一颜色的圆角进度条</p> <div class="language-css extra-class"><pre class="language-css"><code>&lt;div class=<span class="token string">&quot;bruce flex-ct-x&quot;</span>&gt;
+	&lt;div class=<span class="token string">&quot;fillet-progressbar&quot;</span>&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+<span class="token atrule"><span class="token rule">@mixin</span> <span class="token function">progress-bar</span><span class="token punctuation">(</span>$<span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">,</span> $<span class="token property">height</span><span class="token punctuation">:</span> 10px<span class="token punctuation">,</span> $<span class="token property">color</span><span class="token punctuation">:</span> $red<span class="token punctuation">,</span> $<span class="token property">percent</span><span class="token punctuation">:</span> 0<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> $height / 2<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> $width<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> $height<span class="token punctuation">;</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> #ccc<span class="token punctuation">;</span>
+	<span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">radial-gradient</span><span class="token punctuation">(</span>closest-side circle at $percent<span class="token punctuation">,</span> $color<span class="token punctuation">,</span> $color 100%<span class="token punctuation">,</span> transparent<span class="token punctuation">)</span><span class="token punctuation">,</span>
+		<span class="token function">linear-gradient</span><span class="token punctuation">(</span>$color<span class="token punctuation">,</span> $color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat<span class="token punctuation">;</span>
+	<span class="token property">background-size</span><span class="token punctuation">:</span> 100%<span class="token punctuation">,</span> $percent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.fillet-progressbar</span> <span class="token punctuation">{</span>
+	<span class="token atrule"><span class="token rule">@include</span> <span class="token function">progress-bar</span><span class="token punctuation">(</span>500px<span class="token punctuation">,</span> 10px<span class="token punctuation">,</span> $purple<span class="token punctuation">,</span> 50%<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqMAAABtCAYAAACV4miFAAADDklEQVR4nO3dMUokUQBF0d8yYGBg4AYEc5NJxAX1onpBYjKJueAGDAwMRNCxBkwMHeffKfsc6PhVeKnq+rV5fTMAACBwUF8AAAD7S4wCAJARowAAZMQoAAAZMQoAQEaMAgCQEaMAAGTEKAAAGTEKAEBGjAIAkBGjAABkxCgAABkxCgBARowCAJARowAAZMQoAAAZMQoAQEaMAgCQEaMAAGTEKAAAGTEKAEBGjAIAkBGjAABkxCgAABkxCgBARowCAJARowAAZMQoAAAZMQoAQEaMAgCQEaMAAGTEKAAAGTEKAEBGjAIAkBGjAABkxCgAABkxCgBARowCAJARowAAZMQoAAAZMQoAQObH7MGrqzGur8e4uxvj6Wn2OsC/s93+qi8B4FMODg7G0dHRODk5+fObafP6ZsbQ8/MYu90YNzcz1gA6ohRYs+Pj43F2djY2m82UvWmP6YUosC92u5/1JQB82sPDw7i9vZ22NyVGl0fzQhQAYB2WIL2/v5+yNSVGl/+IAuwTd0eBtftWMbq8rAQAwHo8Pj5O2ZkSo96aBwBYl5eXlyk7U2L08HDGCgAAX2U57mnKzoyR09MZKwAAfJXl3NEZpsToxcWMFYD/h7NGgbWbdfj9lBi9vBzj/HzGEgAAf2s5+P5bxehiuxWkwH5wVxRYs/cvMM0y7XOg73ybHviuRCiwVnvxbXoAAPho2mN6AAD4SIwCAJARowAAZMQoAAAZMQoAQEaMAgCQEaMAAGTEKAAAGTEKAEBGjAIAkBGjAABkxCgAABkxCgBARowCAJARowAAZMQoAAAZMQoAQEaMAgCQEaMAAGTEKAAAGTEKAEBGjAIAkBGjAABkxCgAABkxCgBARowCAJARowAAZMQoAAAZMQoAQEaMAgCQEaMAAGTEKAAAGTEKAEBGjAIAkBGjAABkxCgAABkxCgBARowCAJARowAAZMQoAAAZMQoAQEaMAgCQEaMAAGTEKAAAGTEKAEBGjAIAkBGjAABkxCgAABkxCgBARowCAJARowAAZMQoAAAZMQoAQOY3+HBSydOuj1UAAAAASUVORK5CYII=" alt="images"></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新:</span> <span class="time">11/26/2019, 8:14:20 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/note/javascript/design.html" class="prev">设计模式</a></span> <span class="next"><a href="/note/css/clever.html">奇赢异巧</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/note/assets/js/app.7e36bc0c.js" defer></script><script src="/note/assets/js/2.4cd40cb8.js" defer></script><script src="/note/assets/js/3.2ba2a6fd.js" defer></script>
+  </body>
+</html>

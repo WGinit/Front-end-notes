@@ -5,7 +5,8 @@ module.exports = [
     ['/javascript/design', '设计模式']
   ]),
   getSideBar('Css', [
-    ['/css/skill', '开发技巧']
+    ['/css/skill', '开发技巧'],
+    ['/css/clever', '奇赢异巧']
   ]),
   getSideBar('移动端', [
     ['/web/util', '移动端常用知识点总结']

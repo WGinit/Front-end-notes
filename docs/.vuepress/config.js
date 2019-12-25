@@ -8,8 +8,10 @@ module.exports = {
   port: '',
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
-    ['meta', {'name':'viewport', content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"}]
+    ['meta', {'name':'viewport', content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"}],
+    ['script', { src: 'https://s9.cnzz.com/z_stat.php?id=1278302134&web_id=1278302134'}]
   ],
+
   markdown: {
     lineNumbers: false, // 代码显示行号
     // markdown-it-anchor 的选项

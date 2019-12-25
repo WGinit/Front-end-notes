@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>代码注释 | 白山羊笔记</title>
+    <meta name="description" content="记录日常开发笔记">
+    <link rel="icon" href="/note/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <script src="https://s9.cnzz.com/z_stat.php?id=1278302134&amp;web_id=1278302134"></script>
+    
+    <link rel="preload" href="/note/assets/css/0.styles.70ccd1fd.css" as="style"><link rel="preload" href="/note/assets/js/app.7e36bc0c.js" as="script"><link rel="preload" href="/note/assets/js/2.4cd40cb8.js" as="script"><link rel="preload" href="/note/assets/js/7.6128dfaa.js" as="script"><link rel="prefetch" href="/note/assets/js/10.2e086bd7.js"><link rel="prefetch" href="/note/assets/js/11.f076dfca.js"><link rel="prefetch" href="/note/assets/js/12.5e08c56e.js"><link rel="prefetch" href="/note/assets/js/13.5d992d17.js"><link rel="prefetch" href="/note/assets/js/14.08bfe70c.js"><link rel="prefetch" href="/note/assets/js/15.79a8a00e.js"><link rel="prefetch" href="/note/assets/js/16.c674646e.js"><link rel="prefetch" href="/note/assets/js/3.2ba2a6fd.js"><link rel="prefetch" href="/note/assets/js/4.252a69ff.js"><link rel="prefetch" href="/note/assets/js/5.07800011.js"><link rel="prefetch" href="/note/assets/js/6.54daff14.js"><link rel="prefetch" href="/note/assets/js/8.7bc7fe97.js"><link rel="prefetch" href="/note/assets/js/9.e49fbe7c.js">
+    <link rel="stylesheet" href="/note/assets/css/0.styles.70ccd1fd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/note/" class="home-link router-link-active"><img src="/note/logo.png" alt="白山羊笔记" class="logo"> <span class="site-name can-hide">白山羊笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/WGinit/Front-end-notes.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/WGinit/Front-end-notes.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>移动端</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小程序</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>性能优化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网络协议</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>注释</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/note/annotation/code.html" class="active sidebar-link">代码注释</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note/annotation/code.html#键盘" class="sidebar-link">键盘</a></li><li class="sidebar-sub-header"><a href="/note/annotation/code.html#佛祖" class="sidebar-link">佛祖</a></li><li class="sidebar-sub-header"><a href="/note/annotation/code.html#草泥马" class="sidebar-link">草泥马</a></li><li class="sidebar-sub-header"><a href="/note/annotation/code.html#美女" class="sidebar-link">美女</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="代码注释"><a href="#代码注释" class="header-anchor">#</a> 代码注释</h1> <h2 id="键盘"><a href="#键盘" class="header-anchor">#</a> 键盘</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">(</span><span class="token parameter">_</span><span class="token operator">=&gt;</span><span class="token punctuation">[</span><span class="token operator">...</span><span class="token string">&quot;`1234567890-=~~QWERTYUIOP[]\\~ASDFGHJKL;'~~ZXCVBNM,./~&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">x</span><span class="token operator">=&gt;</span><span class="token punctuation">(</span>o<span class="token operator">+=</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>b<span class="token operator">=</span><span class="token string">'_'</span><span class="token punctuation">.</span><span class="token function">repeat</span><span class="token punctuation">(</span>w<span class="token operator">=</span>x<span class="token operator">&lt;</span>y<span class="token operator">?</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token string">' 667699'</span><span class="token punctuation">[</span>x<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&quot;Bs&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;Tab&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;Caps&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;Enter&quot;</span><span class="token punctuation">]</span><span class="token punctuation">[</span>p<span class="token operator">++</span><span class="token punctuation">]</span><span class="token operator">||</span><span class="token string">'Shift'</span><span class="token punctuation">,</span>p<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">\\|</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>m<span class="token operator">+=</span>y<span class="token operator">+</span><span class="token punctuation">(</span>x<span class="token operator">+</span><span class="token string">'    '</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>w<span class="token punctuation">)</span><span class="token operator">+</span>y<span class="token operator">+</span>y<span class="token punctuation">,</span>n<span class="token operator">+=</span>y<span class="token operator">+</span>b<span class="token operator">+</span>y<span class="token operator">+</span>y<span class="token punctuation">,</span>l<span class="token operator">+=</span><span class="token string">' __'</span><span class="token operator">+</span>b<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">73</span><span class="token punctuation">]</span><span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>k<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span>m<span class="token punctuation">,</span>n<span class="token punctuation">,</span>o<span class="token punctuation">)</span><span class="token punctuation">,</span>l<span class="token operator">=</span><span class="token string">''</span><span class="token punctuation">,</span>m<span class="token operator">=</span>n<span class="token operator">=</span>o<span class="token operator">=</span>y<span class="token punctuation">)</span><span class="token punctuation">,</span>m<span class="token operator">=</span>n<span class="token operator">=</span>o<span class="token operator">=</span>y<span class="token operator">=</span><span class="token string">'|'</span><span class="token punctuation">,</span>p<span class="token operator">=</span>l<span class="token operator">=</span>k<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span>k<span class="token punctuation">.</span>join<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ________
+||` |||1 |||2 |||3 |||4 |||5 |||6 |||7 |||8 |||9 |||0 |||- |||= |||Bs    ||
+||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||______||
+|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/______\|
+ ________ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____
+||Tab   |||Q |||W |||E |||R |||T |||Y |||U |||I |||O |||P |||[ |||] |||\ ||
+||______|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__||
+|/______\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|
+ _________ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ________
+||Caps   |||A |||S |||D |||F |||G |||H |||J |||K |||L |||; |||' |||Enter ||
+||_______|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||______||
+|/_______\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/______\|
+ ___________ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ___________
+||Shift    |||Z |||X |||C |||V |||B |||N |||M |||, |||. |||/ |||Shift    ||
+||_________|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||_________||
+|/_________\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/_________\|
+
+**/</span>
+</code></pre></div><h2 id="佛祖"><a href="#佛祖" class="header-anchor">#</a> 佛祖</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/*
+ * **************************************************************************
+ * ********************                                  ********************
+ * ********************      COPYRIGHT INFORMATION       ********************
+ * ********************                                  ********************
+ * **************************************************************************
+ *                                                                          *
+ *                                   _oo8oo_                                *
+ *                                  o8888888o                               *
+ *                                  88&quot; . &quot;88                               *
+ *                                  (| -_- |)                               *
+ *                                  0\  =  /0                               *
+ *                                ___/'==='\___                             *
+ *                              .' \\|     |// '.                           *
+ *                             / \\|||  :  |||// \                          *
+ *                            / _||||| -:- |||||_ \                         *
+ *                           |   | \\\  -  /// |   |                        *
+ *                           | \_|  ''\---/''  |_/ |                        *
+ *                           \  .-\__  '-'  __/-.  /                        *
+ *                         ___'. .'  /--.--\  '. .'___                      *
+ *                      .&quot;&quot; '&lt;  '.___\_&lt;|&gt;_/___.'  &gt;' &quot;&quot;.                   *
+ *                     | | :  `- \`.:`\ _ /`:.`/ -`  : | |                  *
+ *                     \  \ `-.   \_ __\ /__ _/   .-` /  /                  *
+ *                 =====`-.____`.___ \_____/ ___.`____.-`=====              *
+ *                                   `=---=`                                *
+ * **************************************************************************
+ * ********************                                  ********************
+ * ********************      				 ********************
+ * ********************         佛祖保佑 永远无BUG       ********************
+ * ********************                                  ********************
+ * **************************************************************************
+ */</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token comment">/*                            _ooOoo_
+ *                           o8888888o
+ *                           88&quot; . &quot;88
+ *                           (| -_- |)
+ *                            O\ = /O
+ *                        ____/`---'\____
+ *                      .   ' \\| |// `.
+ *                       / \\||| : |||// \
+ *                     / _||||| -:- |||||- \
+ *                       | | \\\ - /// | |
+ *                     | \_| ''\---/'' | |
+ *                      \ .-\__ `-` ___/-. /
+ *                   ___`. .' /--.--\ `. . __
+ *                .&quot;&quot; '&lt; `.___\_&lt;|&gt;_/___.' &gt;'&quot;&quot;.
+ *               | | : `- \`.;`\ _ /`;.`/ - ` : | |
+ *                 \ \ `-. \_ __\ /__ _/ .-` / /
+ *         ======`-.____`-.___\_____/___.-`____.-'======
+ *                            `=---='
+ *
+ *         .............................................
+ *                  佛祖镇楼                  BUG辟易
+ *          佛曰:
+ *                  写字楼里写字间，写字间里程序员；
+ *                  程序人员写程序，又拿程序换酒钱。
+ *                  酒醒只在网上坐，酒醉还来网下眠；
+ *                  酒醉酒醒日复日，网上网下年复年。
+ *                  但愿老死电脑间，不愿鞠躬老板前；
+ *                  奔驰宝马贵者趣，公交自行程序员。
+ *                  别人笑我忒疯癫，我笑自己命太贱；
+ *                  不见满街漂亮妹，哪个归得程序员？
+ */</span>
+</code></pre></div><h2 id="草泥马"><a href="#草泥马" class="header-anchor">#</a> 草泥马</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ *
+ * ━━━━━━━━━━神兽出没━━━━━━━━━━
+ *
+ * 　　　　　　　　┏┓　　　┏┓
+ * 　　　　　　　┏┛┻━━━┛┻┓
+ * 　　　　　　　┃　　　　　　　┃ 　
+ * 　　　　　　　┃　　　━　　　┃
+ * 　　　　　　　┃　＞　　　＜　┃
+ * 　　　　　　　┃　　　　　　　┃
+ * 　　　　　　　┃...　⌒　...　┃
+ * 　　　　　　　┃　　　　　　　┃
+ * 　　　　　　　┗━┓　　　┏━┛
+ * 　　　　　　　　　┃　　　┃　Code is far away from bug with the animal protecting　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┃   神兽保佑,代码无bug
+ * 　　　　　　　　　┃　　　┃　　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┃  　　　　　　
+ * 　　　　　　　　　┃　　　┃
+ * 　　　　　　　　　┃　　　┃　　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┗━━━┓
+ * 　　　　　　　　　┃　　　　　　　┣┓
+ * 　　　　　　　　　┃　　　　　　　┏┛
+ * 　　　　　　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　　　　　　┃┫┫　┃┫┫
+ * 　　　　　　　　　　┗┻┛　┗┻┛
+ *
+ * ━━━━━━━━━━感觉萌萌哒━━━━━━━━━━
+ */</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ *
+ * ━━━━━━━━━神兽出没━━━━━━━━━
+ *
+ *　　　　　　　　┏┓　　　┏┓+ +
+ *　　　　　　　┏┛┻━━━┛┻┓ + +
+ *　　　　　　　┃　　　　　　　┃ 　
+ *　　　　　　　┃　　　━　　　┃ ++ + + +
+ *　　　　　　 ████━████ ┃+
+ *　　　　　　　┃　　　　　　　┃ +
+ *　　　　　　　┃　　　┻　　　┃
+ *　　　　　　　┃　　　　　　　┃ + +
+ *　　　　　　　┗━┓　　　┏━┛
+ *　　　　　　　　　┃　　　┃　　　　　　　　　　　
+ *　　　　　　　　　┃　　　┃ + + + +
+ *　　　　　　　　　┃　　　┃　　　　Code is far away from bug with the animal protecting　　　　　　　
+ *　　　　　　　　　┃　　　┃ + 　　　　神兽保佑,代码无bug　　
+ *　　　　　　　　　┃　　　┃
+ *　　　　　　　　　┃　　　┃　　+　　　　　　　　　
+ *　　　　　　　　　┃　 　　┗━━━┓ + +
+ *　　　　　　　　　┃ 　　　　　　　┣┓
+ *　　　　　　　　　┃ 　　　　　　　┏┛
+ *　　　　　　　　　┗┓┓┏━┳┓┏┛ + + + +
+ *　　　　　　　　　　┃┫┫　┃┫┫
+ *　　　　　　　　　　┗┻┛　┗┻┛+ + + +
+ *
+ * ━━━━━━━━━感觉萌萌哒━━━━━━━━━
+ */</span>
+</code></pre></div><h2 id="美女"><a href="#美女" class="header-anchor">#</a> 美女</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/*                       .::::.
+**                     .::::::::.
+**                    :::::::::::
+**                 ..:::::::::::'
+**              '::::::::::::'
+**                .::::::::::
+**           '::::::::::::::..
+**                ..::::::::::::.
+**              ``::::::::::::::::
+**               ::::``:::::::::'        .:::.
+**              ::::'   ':::::'       .::::::::.
+**            .::::'      ::::     .:::::::'::::.
+**           .:::'       :::::  .:::::::::' ':::::.
+**          .::'        :::::.:::::::::'      ':::::.
+**         .::'         ::::::::::::::'         ``::::.
+**     ...:::           ::::::::::::'              ``::.
+**    ```` ':.          ':::::::::'                  ::::..
+**                       '.:::::'                    ':'````..
+*/</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新:</span> <span class="time">11/26/2019, 8:14:20 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/note/network/http-code.html" class="prev">http请求状态码</a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/note/assets/js/app.7e36bc0c.js" defer></script><script src="/note/assets/js/2.4cd40cb8.js" defer></script><script src="/note/assets/js/7.6128dfaa.js" defer></script>
+  </body>
+</html>

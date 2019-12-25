@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>http请求状态码 | 白山羊笔记</title>
+    <meta name="description" content="记录日常开发笔记">
+    <link rel="icon" href="/note/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <script src="https://s9.cnzz.com/z_stat.php?id=1278302134&amp;web_id=1278302134"></script>
+    
+    <link rel="preload" href="/note/assets/css/0.styles.70ccd1fd.css" as="style"><link rel="preload" href="/note/assets/js/app.7e36bc0c.js" as="script"><link rel="preload" href="/note/assets/js/2.4cd40cb8.js" as="script"><link rel="preload" href="/note/assets/js/12.5e08c56e.js" as="script"><link rel="prefetch" href="/note/assets/js/10.2e086bd7.js"><link rel="prefetch" href="/note/assets/js/11.f076dfca.js"><link rel="prefetch" href="/note/assets/js/13.5d992d17.js"><link rel="prefetch" href="/note/assets/js/14.08bfe70c.js"><link rel="prefetch" href="/note/assets/js/15.79a8a00e.js"><link rel="prefetch" href="/note/assets/js/16.c674646e.js"><link rel="prefetch" href="/note/assets/js/3.2ba2a6fd.js"><link rel="prefetch" href="/note/assets/js/4.252a69ff.js"><link rel="prefetch" href="/note/assets/js/5.07800011.js"><link rel="prefetch" href="/note/assets/js/6.54daff14.js"><link rel="prefetch" href="/note/assets/js/7.6128dfaa.js"><link rel="prefetch" href="/note/assets/js/8.7bc7fe97.js"><link rel="prefetch" href="/note/assets/js/9.e49fbe7c.js">
+    <link rel="stylesheet" href="/note/assets/css/0.styles.70ccd1fd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/note/" class="home-link router-link-active"><img src="/note/logo.png" alt="白山羊笔记" class="logo"> <span class="site-name can-hide">白山羊笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/WGinit/Front-end-notes.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/WGinit/Front-end-notes.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>移动端</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小程序</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>性能优化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>网络协议</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/note/network/http-code.html" class="active sidebar-link">http请求状态码</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>注释</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="http请求状态码"><a href="#http请求状态码" class="header-anchor">#</a> http请求状态码</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//Informational 1xx  信息</span>
+<span class="token string">'100'</span> <span class="token punctuation">:</span> <span class="token string">'Continue'</span><span class="token punctuation">,</span>  <span class="token comment">//继续</span>
+<span class="token string">'101'</span> <span class="token punctuation">:</span> <span class="token string">'Switching Protocols'</span><span class="token punctuation">,</span>  <span class="token comment">//交换协议</span>
+
+<span class="token comment">//Successful 2xx  成功</span>
+<span class="token string">'200'</span> <span class="token punctuation">:</span> <span class="token string">'OK'</span><span class="token punctuation">,</span>  <span class="token comment">//OK</span>
+<span class="token string">'201'</span> <span class="token punctuation">:</span> <span class="token string">'Created'</span><span class="token punctuation">,</span>  <span class="token comment">//创建</span>
+<span class="token string">'202'</span> <span class="token punctuation">:</span> <span class="token string">'Accepted'</span><span class="token punctuation">,</span>  <span class="token comment">//已接受</span>
+<span class="token string">'203'</span> <span class="token punctuation">:</span> <span class="token string">'Non-Authoritative Information'</span><span class="token punctuation">,</span>  <span class="token comment">//非权威信息</span>
+<span class="token string">'204'</span> <span class="token punctuation">:</span> <span class="token string">'No Content'</span><span class="token punctuation">,</span>  <span class="token comment">//没有内容</span>
+<span class="token string">'205'</span> <span class="token punctuation">:</span> <span class="token string">'Reset Content'</span><span class="token punctuation">,</span>  <span class="token comment">//重置内容</span>
+<span class="token string">'206'</span> <span class="token punctuation">:</span> <span class="token string">'Partial Content'</span><span class="token punctuation">,</span>  <span class="token comment">//部分内容</span>
+
+<span class="token comment">//Redirection 3xx  重 定向</span>
+<span class="token string">'300'</span> <span class="token punctuation">:</span> <span class="token string">'Multiple Choices'</span><span class="token punctuation">,</span>  <span class="token comment">//多种选择</span>
+<span class="token string">'301'</span> <span class="token punctuation">:</span> <span class="token string">'Moved Permanently'</span><span class="token punctuation">,</span>  <span class="token comment">//永久移动</span>
+<span class="token string">'302'</span> <span class="token punctuation">:</span> <span class="token string">'Found'</span><span class="token punctuation">,</span>  <span class="token comment">//找到</span>
+<span class="token string">'303'</span> <span class="token punctuation">:</span> <span class="token string">'See Other'</span><span class="token punctuation">,</span>  <span class="token comment">//参见其他</span>
+<span class="token string">'304'</span> <span class="token punctuation">:</span> <span class="token string">'Not Modified'</span><span class="token punctuation">,</span>  <span class="token comment">//未修改</span>
+<span class="token string">'305'</span> <span class="token punctuation">:</span> <span class="token string">'Use Proxy'</span><span class="token punctuation">,</span>  <span class="token comment">//使用代理</span>
+<span class="token string">'306'</span> <span class="token punctuation">:</span> <span class="token string">'Unused'</span><span class="token punctuation">,</span>  <span class="token comment">//未使用</span>
+<span class="token string">'307'</span> <span class="token punctuation">:</span> <span class="token string">'Temporary Redirect'</span><span class="token punctuation">,</span>  <span class="token comment">//暂时重定向</span>
+
+<span class="token comment">//Client Error 4xx  客户端错误</span>
+<span class="token string">'400'</span> <span class="token punctuation">:</span> <span class="token string">'Bad Request'</span><span class="token punctuation">,</span>  <span class="token comment">//错误的请求</span>
+<span class="token string">'401'</span> <span class="token punctuation">:</span> <span class="token string">'Unauthorized'</span><span class="token punctuation">,</span>  <span class="token comment">//未经授权</span>
+<span class="token string">'402'</span> <span class="token punctuation">:</span> <span class="token string">'Payment Required'</span><span class="token punctuation">,</span>  <span class="token comment">//付费请求</span>
+<span class="token string">'403'</span> <span class="token punctuation">:</span> <span class="token string">'Forbidden'</span><span class="token punctuation">,</span>  <span class="token comment">//禁止</span>
+<span class="token string">'404'</span> <span class="token punctuation">:</span> <span class="token string">'Not Found'</span><span class="token punctuation">,</span>  <span class="token comment">//没有找到</span>
+<span class="token string">'405'</span> <span class="token punctuation">:</span> <span class="token string">'Method Not Allowed'</span><span class="token punctuation">,</span>  <span class="token comment">//方法不允许</span>
+<span class="token string">'406'</span> <span class="token punctuation">:</span> <span class="token string">'Not Acceptable'</span><span class="token punctuation">,</span>  <span class="token comment">//不可接受</span>
+<span class="token string">'407'</span> <span class="token punctuation">:</span> <span class="token string">'Proxy Authentication Required'</span><span class="token punctuation">,</span>  <span class="token comment">//需要代理身份验证</span>
+<span class="token string">'408'</span> <span class="token punctuation">:</span> <span class="token string">'Request Timeout'</span><span class="token punctuation">,</span>  <span class="token comment">//请求超时</span>
+<span class="token string">'409'</span> <span class="token punctuation">:</span> <span class="token string">'Conflict'</span><span class="token punctuation">,</span>  <span class="token comment">//指令冲突</span>
+<span class="token string">'410'</span> <span class="token punctuation">:</span> <span class="token string">'Gone'</span><span class="token punctuation">,</span>  <span class="token comment">//文档永久地离开了指定的位置</span>
+<span class="token string">'411'</span> <span class="token punctuation">:</span> <span class="token string">'Length Required'</span><span class="token punctuation">,</span>  <span class="token comment">//需要Content-Length头请求</span>
+<span class="token string">'412'</span> <span class="token punctuation">:</span> <span class="token string">'Precondition Failed'</span><span class="token punctuation">,</span>  <span class="token comment">//前提条件失败</span>
+<span class="token string">'413'</span> <span class="token punctuation">:</span> <span class="token string">'Request Entity Too Large'</span><span class="token punctuation">,</span>  <span class="token comment">//请求实体太大</span>
+<span class="token string">'414'</span> <span class="token punctuation">:</span> <span class="token string">'Request-URI Too Long'</span><span class="token punctuation">,</span>  <span class="token comment">//请求URI太长</span>
+<span class="token string">'415'</span> <span class="token punctuation">:</span> <span class="token string">'Unsupported Media Type'</span><span class="token punctuation">,</span>  <span class="token comment">//不支持的媒体类型</span>
+<span class="token string">'416'</span> <span class="token punctuation">:</span> <span class="token string">'Requested Range Not Satisfiable'</span><span class="token punctuation">,</span>  <span class="token comment">//请求的范围不可满足</span>
+<span class="token string">'417'</span> <span class="token punctuation">:</span> <span class="token string">'Expectation Failed'</span><span class="token punctuation">,</span>  <span class="token comment">//期望失败</span>
+
+<span class="token comment">//Server Error 5xx  服务器错误</span>
+<span class="token string">'500'</span> <span class="token punctuation">:</span> <span class="token string">'Internal Server Error'</span><span class="token punctuation">,</span>  <span class="token comment">//内部服务器错误</span>
+<span class="token string">'501'</span> <span class="token punctuation">:</span> <span class="token string">'Not Implemented'</span><span class="token punctuation">,</span>  <span class="token comment">//未实现</span>
+<span class="token string">'502'</span> <span class="token punctuation">:</span> <span class="token string">'Bad Gateway'</span><span class="token punctuation">,</span>  <span class="token comment">//错误的网关</span>
+<span class="token string">'503'</span> <span class="token punctuation">:</span> <span class="token string">'Service Unavailable'</span><span class="token punctuation">,</span>  <span class="token comment">//服务不可用</span>
+<span class="token string">'504'</span> <span class="token punctuation">:</span> <span class="token string">'Gateway Timeout'</span><span class="token punctuation">,</span>  <span class="token comment">//网关超时</span>
+<span class="token string">'505'</span> <span class="token punctuation">:</span> <span class="token string">'HTTP Version Not Supported'</span>  <span class="token comment">//HTTP版本不支持</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新:</span> <span class="time">11/26/2019, 8:14:20 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/note/performance/web.html" class="prev">web端性能优化</a></span> <span class="next"><a href="/note/annotation/code.html">代码注释</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/note/assets/js/app.7e36bc0c.js" defer></script><script src="/note/assets/js/2.4cd40cb8.js" defer></script><script src="/note/assets/js/12.5e08c56e.js" defer></script>
+  </body>
+</html>
